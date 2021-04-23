@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-using System;
+using Microsoft.Extensions.Hosting;
 
 namespace Random.Web.Core
 {
     [AppStartup(800)]
     public sealed class RandomWebCoreStartup : AppStartup
     {
-        /*public void ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSpecificationDocuments();
             services.AddControllers();
         }
 
@@ -25,12 +25,10 @@ namespace Random.Web.Core
             app.UseAuthentication();
             app.UseAuthorization();
 
-            app.UseSpecificationDocuments();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
-        }*/
+        }
     }
 }
