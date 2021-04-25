@@ -18,5 +18,10 @@ namespace Random
         /// 全局配置选项
         /// </summary>
         public static readonly IConfiguration Configuration;
+
+        /// <summary>
+        /// 应用服务提供器
+        /// </summary>
+        public static IServiceProvider ApplicationServices { get; internal set; }
     }
 }
