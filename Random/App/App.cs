@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Random.DependencyInjection;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,11 @@ namespace Random
         /// 全局配置选项
         /// </summary>
         public static readonly IConfiguration Configuration;
+
+        /// <summary>
+        /// 应用所有启动配置对象
+        /// </summary>
+        internal static ConcurrentBag<AppStartup> Startups;
 
         /// <summary>
         /// 应用服务提供器
