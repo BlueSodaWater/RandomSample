@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Random.Web.Entry.Controller
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class TestController : ControllerBase
     {

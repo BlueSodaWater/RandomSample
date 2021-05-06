@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Random.SpecificationDocument.Extensions;
 
 namespace Random.Web.Core
 {
@@ -10,6 +11,7 @@ namespace Random.Web.Core
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSpecificationDocuments();
             services.AddControllers();
         }
 
@@ -24,6 +26,8 @@ namespace Random.Web.Core
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseSpecificationDocuments();
 
             app.UseEndpoints(endpoints =>
             {
